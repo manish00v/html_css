@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="costomer.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <nav>
+                    <div class="app-icon">
+                        <a href="#galvinus_logo"> <img src="/imeges/Galvinus_logo.jpeg" alt="app-icon"></a>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="nav-icons">
+                        <a href="#team" title="Team"><i class="fas fa-users icon-team"></i></a>
+                        <a href="#messages" title="Messages"><i class="fas fa-envelope icon-message"></i></a>
+                        <a href="#setting" title="Setting"><i class="fas fa-gear icon-setting"></i></a>
+                        <a href="#profile" title="Profile"><i class="fas fa-user-circle icon-profile"></i></a>
+                    </div>
+                </nav>
+            </header>
+
+           
+
+            <div class="icon-wrapper">
+                <!-- Add Icon -->
+                 <button class="icon-button" onclick="redirect()"><i class="fas fa-plus"></i></button>
+        
+                <!-- Edit Icon -->
+                    <button class="icon-button" onclick="redirect()"><i class="fas fa-edit"></i></button>
+                
+            
+                <!-- Compute Icon -->
+                    <button class="icon-button" onclick="redirect()"> <i class="fas fa-calculator"></i> </button>
+
+                <script>
+                    function redirect() {
+                        window.location.href = "manish"; // Change the URL here
+                    }
+                </script>
+
+                <script>
+                    function redirect() {
+                        window.location.href = "manish"; // Change the URL here
+                    }
+                </script>
+
+            
+            </div>
+
+        </div>
+    </div>
+
+<!-- Left Sidebar -->
+<aside class="sidebar">
+    <ul>
+        <li><a href="#seles-and-distribution"><i class="fas fa-home"></i> Sales and Distribution</a></li>
+
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li class="dropdown">
+            <a href="#"><i class="fas fa-user icon-seles_and_management"></i> Sales and Management</a>
+            <ul class="dropdown-content">
+
+                <li><a href="#seles_order"><i class="fas fa-user icon-sales"></i> Sales Order</a></li>
+                <li><a href="#line-items"><i class="fas fa-tag icon-pricing"></i> Line Items</a></li>
+                <li><a href="#costomer"><i class="fas fa-warehouse icon-inventory"></i> Costomer</a></li>
+                <li><a href="#sales-person"><i class="fas fa-file-invoice-dollar icon-billing"></i> Seles Person</a></li>
+            </ul>
+
+        </li>
+        <li><a href="#integration"><i class="fas fa-link"></i> Integration</a></li>
+        <li><a href="#reports"><i class="fas fa-chart-pie"></i> Reports</a></li>
+        <li><a href="#document"><i class="fas fa-file-alt"></i> Document</a></li>
+    </ul>
+</aside>
+
+
+<div class="message-box">
+    Tip:
+    <br>
+    <br>
+    "Accurate and up-to-date costomer information is the foundation of strong relationship and stramlined operations." 
+</div>
+</head>
+
+</html>

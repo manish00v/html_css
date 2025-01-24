@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="plus_order.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <nav>
+                    <div class="app-icon">
+                        <a href="#galvinus_logo"> <img src="/imeges/Galvinus_logo.jpeg" alt="app-icon"></a>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="nav-icons">
+                        <a href="#team" title="Team"><i class="fas fa-users icon-team"></i></a>
+                        <a href="#messages" title="Messages"><i class="fas fa-envelope icon-message"></i></a>
+                        <a href="#setting" title="Setting"><i class="fas fa-gear icon-setting"></i></a>
+                        <a href="#profile" title="Profile"><i class="fas fa-user-circle icon-profile"></i></a>
+                    </div>
+                </nav>
+            </header>
+
+        </div>
+    </div>
+
+<!-- Left Sidebar -->
+<aside class="sidebar">
+    <ul>
+        <li><a href="#seles-and-distribution"><i class="fas fa-home"></i> Sales and Distribution</a></li>
+
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li class="dropdown">
+            <a href="#"><i class="fas fa-user icon-seles_and_management"></i> Sales and Management</a>
+            <ul class="dropdown-content">
+
+                <li><a href="/Seles_and_distribution/seles_management/seles_order/seles_order.html"><i class="fas fa-user icon-sales"></i> Sales Order</a></li>
+                <li><a href="/Seles_and_distribution/seles_management/line_items/line_items.html"><i class="fas fa-tag icon-pricing"></i> Line Items</a></li>
+                <li><a href="/Seles_and_distribution/seles_management/costomer/costomer.html"><i class="fas fa-warehouse icon-inventory"></i> Costomer</a></li>
+                <li><a href="/Seles_and_distribution/seles_management/sales_person/seles_person.html"><i class="fas fa-file-invoice-dollar icon-billing"></i> Seles Person</a></li>
+            </ul>
+
+        </li>
+        <li><a href="#integration"><i class="fas fa-link"></i> Integration</a></li>
+        <li><a href="#reports"><i class="fas fa-chart-pie"></i> Reports</a></li>
+        <li><a href="#document"><i class="fas fa-file-alt"></i> Document</a></li>
+    </ul>
+</aside>
+
+
+<h1>Customer and Product Details Form</h1>
+    <form action="/submit-form" method="POST">
+        <div class="container">
+
+          
+
+            <!-- Customer Details Box -->
+            <div class="box">
+                <h2>Customer Details</h2>
+                <div class="form-group">
+                    <label for="rule-id">Rule ID (Primary Key)</label>
+                    <input type="text" id="rule-id" name="rule_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-id">Product ID (Foreign Key)</label>
+                    <input type="text" id="product-id" name="product_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="discount-id">Discount ID</label>
+                    <input type="text" id="discount-id" name="discount_id">
+                </div>
+                <div class="form-group">
+                    <label for="customer-group">Customer Group</label>
+                    <input type="text" id="customer-group" name="customer_group">
+                </div>
+                <div class="form-group">
+                    <label for="region">Region</label>
+                    <input type="text" id="region" name="region">
+                </div>
+                <div class="form-group">
+                    <label for="base-price">Base Price</label>
+                    <input type="number" id="base-price" name="base_price" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="effective-date">Effective Date</label>
+                    <input type="date" id="effective-date" name="effective_date">
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="date" id="expiry-date" name="expiry_date">
+                </div>
+            </div>
+
+            <!-- Product Details Box -->
+            <div class="box">
+                <h2>Product Details</h2>
+                <div class="form-group">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" id="product-name" name="product_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="availability">Availability</label>
+                    <select id="availability" name="availability">
+                        <option value="in_stock">In Stock</option>
+                        <option value="out_of_stock">Out of Stock</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+
+</head>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="billing.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <nav>
+                    <div class="app-icon">
+                        <a href="#galvinus_logo"> <img src="images/Galvinus_logo.jpeg" alt="app-icon"></a>
+                    </div>
+
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="nav-icons">
+                        <a href="#team" title="Team"><i class="fas fa-users icon-team"></i></a>
+                        <a href="#messages" title="Messages"><i class="fas fa-envelope icon-message"></i></a>
+                        <a href="#setting" title="Setting"><i class="fas fa-gear icon-setting"></i></a>
+                        <a href="#profile" title="Profile"><i class="fas fa-user-circle icon-profile"></i></a>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="icon-wrapper">
+                <!-- Add Icon -->
+                 <button class="icon-button" onclick="redirect()"><i class="fas fa-plus"></i></button>
+        
+                <!-- Edit Icon -->
+                    <button class="icon-button" onclick="redirect()"><i class="fas fa-edit"></i></button>
+                
+            
+                <!-- Compute Icon -->
+                    <button class="icon-button" onclick="redirect()"> <i class="fas fa-calculator"></i> </button>
+
+                <script>
+                    function redirect() {
+                        window.location.href = "manish"; // Change the URL here
+                    }
+                </script>
+
+                <script>
+                    function redirect() {
+                        window.location.href = "manish"; // Change the URL here
+                    }
+                </script>
+
+
+        </div>
+    </div>
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#seles-and-distribution"><i class="fas fa-home"></i> Sales and Distribution</a></li>
+
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fas fa-user icon-seles_and_distribution"></i> Sales and Distribution</a>
+                <ul class="dropdown-content">
+                    <li><a href="Seles_and_distribution/invoice.html"><i class="fas fa-user icon-sales"></i> Invoice</a></li>
+                    <li><a href="Seles_and_distribution/payment.html"><i class="fas fa-tag icon-pricing"></i> Payment</a></li>
+                    <li><a href="Seles_and_distribution/tax_configuration.html"><i class="fas fa-warehouse icon-inventory"></i> Tax Configuration</a></li>
+                    <li><a href="Seles_and_distribution/currency_exchenge_rate.html"><i class="fas fa-file-invoice-dollar icon-billing"></i> Currency Exchange Rate</a></li>
+                </ul>
+
+            </li>
+            <li><a href="#integration"><i class="fas fa-link"></i> Integration</a></li>
+            <li><a href="#reports"><i class="fas fa-chart-pie"></i> Reports</a></li>
+            <li><a href="#document"><i class="fas fa-file-alt"></i> Document</a></li>
+        </ul>
+
+    </aside>
+
+    <div class="message-box">
+        Tip:
+        <br>
+        <br>
+        "Review existing seles orders to avoid duplications before creating a new one" 
+    </div>
+
+    
+</body>
+</html>
