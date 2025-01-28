@@ -4,56 +4,14 @@ body {
 }
 
 header {
-    
+    height: 50px;  
     background-color: #ffffff;
     color: white;
     padding: rem 0;
     border: 2px solid #333;
 }
-/* add edit section */
 
-.icon-wrapper {
-    position: absolute; /* Allows positioning relative to nearest positioned ancestor */
-    top: 70px; /* Adjust based on header height */
-    right: 20px; /* Distance from the right edge of the page */
-    display: flex; /* Align buttons horizontally */
-    gap: 10px; /* Space between buttons */
-}
-
-.icon-wrapper button {
-    padding: 10px 20px; /* Adds space inside the button */
-    background-color: #bc7171; /* Green background */
-    color: white; /* White text */
-    border: none; /* Removes border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    font-size: 16px; /* Adjusts font size */
-}
-
-.icon-wrapper button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-
-
-        /* Style for the message box */
-        .message-box {
-            background-color: #f18888; 
-            color: #242422; /* black text */
-            border: 1px solid #c8c1c1; 
-            padding: 65px 200px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: left;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Fix it relative to the viewport */
-            top: 40%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Offset the box for perfect centering */
-            z-index: 9999; /* Ensure it's on top of other elements */
-        }
-
+  
 nav .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -76,7 +34,6 @@ nav {
     color: white;
 }
 
-/* Search bar styling */
 
 
 /* Styling for icons */
@@ -161,7 +118,10 @@ body {
 
 /* Main content styling */
 #main-content {
-    margin-left: 220px; /* To accommodate the sidebar */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;    /* Vertical centering */
+    min-height: calc(100vh - 50px); /* Adjust height excluding header height */
     padding: 2rem;
 }
 
@@ -174,9 +134,9 @@ nav {
     padding: 0.5rem 1rem;
     color: white;
 }
- /* app icon */
+/* app icon */
 
- .app-icon {
+.app-icon {
     position: relative;
     display: inline-block;
   }
@@ -263,6 +223,7 @@ nav {
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
   }
 
+
 /* Nav icons */
 .nav-icons {
     display: flex;
@@ -279,6 +240,137 @@ nav {
     color: #00aaff;
 }
 
+/* Code for box */
+
+body {
+    margin: 0;
+    height: 5px; 
+    display: flexbox;
+    /* padding-left: 200px; */
+
+}
+
+.btn-container button:hover {
+    background-color: #0056b3;
+}
+
+
+  
+  /* Main content styling */
+  .content {
+    flex: 1; 
+    padding: 20px;
+   
+    background-color: #f9f9f9;
+    height: 40vh;
+    width: 1600px;
+
+    display: flex;              /* Enables Flexbox */
+    justify-content: center;    /* Horizontally centers the .box */
+    align-items: center;        /* Vertically centers the .box */
+     min-height: calc(100vh - 50px); /* Ensures the height adjusts excluding the header */
+    
+   
+  }
+  
+  /* Centered form containers */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 69%;
+  }
+  
+  .box {
+    padding: 50px;
+    height: 600px; 
+    width: 300px;   
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .box h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .box form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .box form input {
+    place-items: center;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+
+  /* Buttons positioned in the right corner */
+.btn-container {
+    display: flex;
+    gap: 10px;
+    position:absolute ;
+    right: 30px;
+
+   
+}
+
+#btn-container-submit button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-container button:hover {
+    background-color: #0056b3;
+}
+
+        /* Styling for the alert box */
+        .alert-box {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #d4edda; /* Success green background */
+            color: #155724; /* Success green text */
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #e2e6ea;
+        }
 
         /* Styling icons with colors */
         .icon-team {
@@ -312,4 +404,14 @@ nav {
             color: #ff33a8; /* Bright Pink */
 
         }
-     
+        /* .icon-plus {
+            color: #0056b3;
+        }
+
+        .icon-edit{
+            color: #0056b3;
+        }
+
+        .icon-compute{
+            color: #0056b3;
+        } */

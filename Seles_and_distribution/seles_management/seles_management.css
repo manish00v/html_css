@@ -10,50 +10,8 @@ header {
     padding: rem 0;
     border: 2px solid #333;
 }
-/* add edit section */
 
-.icon-wrapper {
-    position: absolute; /* Allows positioning relative to nearest positioned ancestor */
-    top: 70px; /* Adjust based on header height */
-    right: 20px; /* Distance from the right edge of the page */
-    display: flex; /* Align buttons horizontally */
-    gap: 10px; /* Space between buttons */
-}
-
-.icon-wrapper button {
-    padding: 10px 20px; /* Adds space inside the button */
-    background-color: #bc7171; /* Green background */
-    color: white; /* White text */
-    border: none; /* Removes border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    font-size: 16px; /* Adjusts font size */
-}
-
-.icon-wrapper button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-
-
-        /* Style for the message box */
-        .message-box {
-            background-color: #f18888; 
-            color: #242422; /* black text */
-            border: 1px solid #c8c1c1; 
-            padding: 65px 200px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: left;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Fix it relative to the viewport */
-            top: 40%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Offset the box for perfect centering */
-            z-index: 9999; /* Ensure it's on top of other elements */
-        }
-
+  
 nav .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -76,15 +34,7 @@ nav {
     color: white;
 }
 
-/* Search bar styling */
 
-
-/* Styling for icons */
-.nav-icons {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
 
 .nav-icons a {
     color: white;
@@ -173,10 +123,11 @@ nav {
     background-color: #333;
     padding: 0.5rem 1rem;
     color: white;
+    
 }
  /* app icon */
 
- .app-icon {
+.app-icon {
     position: relative;
     display: inline-block;
   }
@@ -312,4 +263,14 @@ nav {
             color: #ff33a8; /* Bright Pink */
 
         }
-     
+        /* .icon-plus {
+            color: #0056b3;
+        }
+
+        .icon-edit{
+            color: #0056b3;
+        }
+
+        .icon-compute{
+            color: #0056b3;
+        } */

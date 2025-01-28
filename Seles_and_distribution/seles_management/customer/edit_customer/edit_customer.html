@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="edit_customer.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <nav>
+                    <div class="logo-container">
+                        <img src="../../../../images/galvinus_logo..jpeg" alt="app-icon">
+                        <span class="logo-text">Galvinus</span>
+                      </div>
+
+                      <div class="search-box">
+                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                        <input type="text" class="input-search" placeholder="Type to Search...">
+                      </div>
+
+                    <div class="nav-icons">
+                        <a href="#team" title="Team"><i class="fas fa-users icon-team"></i></a>
+                        <a href="#messages" title="Messages"><i class="fas fa-envelope icon-message"></i></a>
+                        <a href="#setting" title="Setting"><i class="fas fa-gear icon-setting"></i></a>
+                        <a href="#profile" title="Profile"><i class="fas fa-user-circle icon-profile"></i></a>
+                    </div>
+                </nav>
+            </header>
+
+        </div>
+    </div>
+
+<!-- Left Sidebar -->
+<aside class="sidebar">
+    <ul>
+        <li><a href="#seles-and-distribution"><i class="fas fa-home"></i> Sales and Distribution</a></li>
+
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li class="dropdown">
+            <a href="#"><i class="fas fa-user icon-seles_and_management"></i> Sales and Management</a>
+            <ul class="dropdown-content">
+
+                <li><a href="/Seles_and_distribution/seles_management/seles_order/seles_order.html"><i class="fas fa-user icon-sales"></i> Sales Order</a></li>
+                <li><a href="/Seles_and_distribution/seles_management/line_items/line_items.html"><i class="fas fa-tag icon-pricing"></i> Line Items</a></li>
+                <li><a href="/Seles_and_distribution/seles_management/costomer/costomer.html"><i class="fas fa-warehouse icon-inventory"></i> Costomer</a></li>
+                <li><a href="/Seles_and_distribution/seles_management/sales_person/seles_person.html"><i class="fas fa-file-invoice-dollar icon-billing"></i> Seles Person</a></li>
+            </ul>
+
+        </li>
+        <li><a href="#integration"><i class="fas fa-link"></i> Integration</a></li>
+        <li><a href="#reports"><i class="fas fa-chart-pie"></i> Reports</a></li>
+        <li><a href="#document"><i class="fas fa-file-alt"></i> Document</a></li>
+    </ul>
+</aside>
+
+<div class="btn-container">
+    <button id="create-btn">Create</button>
+    <button id="save-btn">Save</button>
+  </div>
+
+    <main class="content">
+    <div class="form-container">
+      <div class="box" id="box1">
+        <h2>Box 1</h2>
+        <form action="/submit-form" method="POST">
+            <label for="order-line-itemid">Order line item ID (Primary Key)</label>
+            <input type="text" id="order-line-item-id" name="order_line_item_id" required>
+
+            <label for="discount-id">Discount ID</label>
+            <input type="text" id="discount-id" name="discount_id">
+
+            <label for="costomer-id">Product ID (Foreign Key)</label>
+            <input type="text" id="costomer-id" name="costomer_id" required>
+
+            <label for="base-price">Base Price</label>
+            <input type="number" id="base-price" name="base_price" step="1">
+
+            <label for="effective-date">Effective Date</label>
+            <input type="date" id="effective-date" name="effective_date">
+
+            <label for="expiry-date">Expiry Date</label>
+            <input type="date" id="expiry-date" name="expiry_date">
+        </form>
+        <button id="saveBtn">Submit</button>
+        <div id="alertBox" class="alert-box">
+            Your details were successfully saved in the database!
+            <br>
+            <button class="close-btn" id="closeBtn">Close</button>
+        </div>
+    
+        <script>
+            // Get elements
+            const saveBtn = document.getElementById('saveBtn');
+            const alertBox = document.getElementById('alertBox');
+            const closeBtn = document.getElementById('closeBtn');
+    
+            // Show the alert box on Save button click
+            saveBtn.addEventListener('click', () => {
+                alertBox.style.display = 'block'; // Display the alert
+            });
+    
+            // Close the alert box on Close button click
+            closeBtn.addEventListener('click', () => {
+                alertBox.style.display = 'none'; // Hide the alert
+            });
+        </script>
+      </div>
+      <div class="box" id="box2">
+        <h2>Box 2</h2>
+        <form>
+            <label for="quantity">Product Name</label>
+            <input type="text" id="quantity" name="quantity" required>
+
+            <label for="unit-price">Price</label>
+            <input type="number" id="unit-price" name="unit_price" step="1">
+
+            <label for="discount">Discount (%)</label>
+            <input type="text" id="discount" name="discount">
+
+            <label for="tax">Tax (%)</label>
+            <input type="text" id="tax" name="tax">
+
+            <button onclick="calculateTotal()">Total Line Item Price</button>
+            <div class="result-box">
+                <div class="result-value" id="result">--</div>
+              </div>
+
+  <script>
+    function calculateTotal() {
+      // Get input values
+      const unitPrice = parseFloat(document.getElementById('unit-price').value) || 0;
+      const discount = parseFloat(document.getElementById('discount').value) || 0;
+      const tax = parseFloat(document.getElementById('tax').value) || 0;
+
+      // Calculate total price
+      const discountedPrice = unitPrice - (unitPrice * (discount / 100));
+      const totalPrice = discountedPrice + (discountedPrice * (tax / 100));
+
+      // Display the result in the result box
+      document.getElementById('result').textContent = `₹${totalPrice.toFixed(2)}`;
+    }
+  </script>
+
+        </form>
+        <!-- <div class="btn-container">
+            <button type="submit">Submit</button>
+        </div> -->
+      </div>
+    </div>
+  </main>
+</head>
+
+</html>

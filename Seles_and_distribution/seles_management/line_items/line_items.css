@@ -22,7 +22,7 @@ header {
 
 .icon-wrapper button {
     padding: 10px 20px; /* Adds space inside the button */
-    background-color: #4CAF50; /* Green background */
+    background-color: #bc7171; /* Green background */
     color: white; /* White text */
     border: none; /* Removes border */
     border-radius: 4px; /* Rounded corners */
@@ -36,23 +36,24 @@ header {
 
 
 
-        /* Style for the message box */
-        .message-box {
-            background-color: #fc0000; /* Red */
-            color: #0c0c0b; /* black text */
-            border: 1px solid #fc0000; /* Red */
-            padding: 65px 200px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: left;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Fix it relative to the viewport */
-            top: 40%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Offset the box for perfect centering */
-            z-index: 9999; /* Ensure it's on top of other elements */
-        }
+
+    /* Style for the message box */
+    .message-box {
+        background-color: #f18888; 
+        color: #242422; /* black text */
+        border: 1px solid #c8c1c1; 
+        padding: 65px 200px;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: left;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed; /* Fix it relative to the viewport */
+        top: 40%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Offset the box for perfect centering */
+        z-index: 9999; /* Ensure it's on top of other elements */
+    }
 
 nav .logo {
     font-size: 1.5rem;
@@ -74,38 +75,6 @@ nav {
     background-color: #ffffff;
     padding: 0.5rem 1rem;
     color: white;
-}
-
-/* Search bar styling */
-.search-bar {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    max-width: 400px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-    font-size: 1rem;
-}
-
-.search-bar button {
-    background-color: #007BFF;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: white;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #0056b3;
 }
 
 /* Styling for icons */
@@ -203,40 +172,95 @@ nav {
     padding: 0.5rem 1rem;
     color: white;
 }
-.app-icon img{
-    /* display: flex;
-    padding: 0.5rem; */
-        width: 100px;
-        height: 40px;
-    
-}
+/* app icon */
+
+.app-icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .logo-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .logo-container img {
+    width: 35px; /* Adjust as per your design */
+    height: 35px; /* Adjust as per your design */
+    border-radius: 50%;
+    padding: rem 1rem;
+    display: block;
+  }
+  
+  .logo-text {
+    position: absolute;
+    top: 35%; /* Centers the text vertically */
+    left: 120%; /* Centers the text horizontally */
+    transform: translate(1, -70%); /* Adjusts for the text's width and height */
+    color: white;
+    font-size: 14px; /* Adjust as per your design */
+    text-align: center;
+  }
+  
+
+
 
 /* Search bar styling */
-.search-bar {
-    display: flex;
-    align-items: center;
-}
-
-.search-bar input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .input-search{
+    height: 20px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
     outline: none;
-    font-size: 1rem;
-}
-
-.search-bar button {
-    padding: 0.5rem;
-    background-color: #007BFF;
-    border: none;
-    color: white;
-    border-radius: 0 4px 4px 0;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #292b2b;
+    padding-right: 40px;
+    color:#ebe4e4;
+  }
+  .input-search::placeholder{
+    color:rgba(125,122,122,0.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
     cursor: pointer;
-}
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ebe4e4 ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(125, 122, 122, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(125,122,122,0.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
 
-.search-bar button:hover {
-    background-color: #0056b3;
-}
 
 /* Nav icons */
 .nav-icons {

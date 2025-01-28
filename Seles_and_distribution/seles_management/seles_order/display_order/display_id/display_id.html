@@ -6,7 +6,7 @@
     <title>Home Page</title>
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="seles_management.css">
+    <link rel="stylesheet" href="display_id.css">
 </head>
 <body>
     <div class="container">
@@ -16,7 +16,7 @@
             <header>
                 <nav>
                     <div class="logo-container">
-                        <img src="../../images/galvinus_logo..jpeg" alt="app-icon">
+                        <img src="../../../../images/galvinus_logo..jpeg" alt="app-icon">
                         <span class="logo-text">Galvinus</span>
                       </div>
 
@@ -49,7 +49,7 @@
 
                 <li><a href="/Seles_and_distribution/seles_management/seles_order/seles_order.html"><i class="fas fa-user icon-sales"></i> Sales Order</a></li>
                 <li><a href="/Seles_and_distribution/seles_management/line_items/line_items.html"><i class="fas fa-tag icon-pricing"></i> Line Items</a></li>
-                <li><a href="/Seles_and_distribution/seles_management/customer/customer.html"><i class="fas fa-warehouse icon-inventory"></i> Customer</a></li>
+                <li><a href="/Seles_and_distribution/seles_management/costomer/costomer.html"><i class="fas fa-warehouse icon-inventory"></i> Costomer</a></li>
                 <li><a href="/Seles_and_distribution/seles_management/sales_person/seles_person.html"><i class="fas fa-file-invoice-dollar icon-billing"></i> Seles Person</a></li>
             </ul>
 
@@ -59,6 +59,35 @@
         <li><a href="#document"><i class="fas fa-file-alt"></i> Document</a></li>
     </ul>
 </aside>
+
+<div class="btn-container">
+    <button id="create-btn">Edit</button>
+    <button id="save-btn">Save</button>
+  </div>
+
+    <main class="content">
+    <div class="form-container">
+      <div class="box" id="box1">
+        <h2>Edit line items - Mandatory Details</h2>
+        <form action="/submit-form" method="POST">
+            <label for="order-line-itemid">Order line item ID (Primary Key)</label>
+            <input type="text" id="order-line-item-id" name="order_line_item_id" required>
+
+            
+        </form>
+        <div class="btn-container-submit">
+            <button>
+                <i class="fas fa-edit"></i>
+                <a href="/Seles_and_distribution/seles_management/seles_order/display_order/display_order.html" style="text-decoration: none; color: inherit;">Edit Order</a>
+            </button>
+        </div>
+      </div>
+      
+
+      </div>
+    </div>
+  </main>
+
 
 </head>
 

@@ -1,0 +1,131 @@
+/* Code for box */
+
+body {
+    margin: 0;
+    height: 5px; 
+    display: flexbox;
+    /* padding-left: 200px; */
+
+}
+
+.btn-container button:hover {
+    background-color: #0056b3;
+}
+
+
+  
+  /* Main content styling */
+  .content {
+    flex: 1; 
+    padding: 20px;
+   
+    background-color: #f9f9f9;
+    height: 40vh;
+    width: 1600px;
+
+    display: flex;              /* Enables Flexbox */
+    justify-content: center;    /* Horizontally centers the .box */
+    align-items: center;        /* Vertically centers the .box */
+     min-height: calc(100vh - 50px); /* Ensures the height adjusts excluding the header */
+    
+   
+  }
+  
+  /* Centered form containers */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 69%;
+  }
+  
+  .box {
+    padding: 50px;
+    height: 600px; 
+    width: 300px;   
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .box h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .box form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .box form input {
+    place-items: center;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+
+  /* Buttons positioned in the right corner */
+.btn-container {
+    display: flex;
+    gap: 10px;
+    position:absolute ;
+    right: 30px;
+
+   
+}
+
+#btn-container-submit button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-container button:hover {
+    background-color: #0056b3;
+}
+
+        /* Styling for the alert box */
+        .alert-box {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #d4edda; /* Success green background */
+            color: #155724; /* Success green text */
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #e2e6ea;
+        }
